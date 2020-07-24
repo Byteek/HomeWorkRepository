@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MySqlClassConnection {
+
     static String url = "jdbc:mysql://localhost:3306/mydb";
+    static String testUrl = "jdbc:mysql://localhost:3306/mydb_test";
     static Properties properties = new Properties();
 
 
@@ -24,15 +26,12 @@ public class MySqlClassConnection {
         }
     }
 
-    Connection connection;
-
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
                 url,
                 properties);
     }
 
-    private static String testUrl = "jdbc:mysql://localhost:3306/mydb_test";
 
     public static Connection getTestConnection() throws SQLException {
         return DriverManager.getConnection(

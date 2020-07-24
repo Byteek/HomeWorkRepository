@@ -14,10 +14,9 @@ import java.util.logging.Logger;
 
 public class DaoDto implements Dao {
 
-    private static Logger logger = Logger.getLogger(DaoDto.class.getName());
+    private static final Logger logger = Logger.getLogger(DaoDto.class.getName());
 
-    private Connection connection;
-    private boolean isTestInstanse;
+    private final Connection connection;
     private Receiver receiver;
     private Expense expense;
 
@@ -53,7 +52,7 @@ public class DaoDto implements Dao {
     private List<Receiver> parseResultSetReceivers(ResultSet resultSet) throws SQLException {
         List<Receiver> receivers = new ArrayList<>();
         while (resultSet.next()) {
-            Receiver receiver = new Receiver();
+            receiver = new Receiver();
             receiver.setNumberReceiver(resultSet.getInt("num"));
             receiver.setName(resultSet.getString("name"));
             receivers.add(receiver);
@@ -90,7 +89,7 @@ public class DaoDto implements Dao {
     private List<Expense> parseResultSetExpense(ResultSet resultSet) throws SQLException {
         List<Expense> expenses = new ArrayList<>();
         while (resultSet.next()) {
-            Expense expense = new Expense();
+            expense = new Expense();
             expense.setNumberExpense(resultSet.getInt("num"));
             expense.setPayDate(resultSet.getDate("paydate"));
             expense.setReceiver(resultSet.getInt("receiver"));
