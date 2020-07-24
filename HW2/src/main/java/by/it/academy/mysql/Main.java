@@ -1,4 +1,4 @@
-package by.it.academy;
+package by.it.academy.mysql;
 
 import java.sql.*;
 import java.util.Properties;

@@ -1,0 +1,15 @@
+<dataset>
+
+    <receivers num="1" name="Corona"/>
+    <receivers num="2" name="Euroopt"/>
+    <receivers num="3" name="Hit"/>
+    <receivers num="4" name="Green"/>
+    <receivers num="5" name="Almi"/>
+
+    <expenses num="1" paydate="2000-12-12" receiver="3" value="20000" />
+    <expenses num="2" paydate="2000-12-13" receiver="3" value="25000" />
+    <expenses num="3" paydate="2000-12-14" receiver="3" value="30000" />
+    <expenses num="4" paydate="2000-12-15" receiver="3" value="40000" />
+    <expenses num="5" paydate="2000-12-16" receiver="3" value="50000" />
+
+</dataset>
